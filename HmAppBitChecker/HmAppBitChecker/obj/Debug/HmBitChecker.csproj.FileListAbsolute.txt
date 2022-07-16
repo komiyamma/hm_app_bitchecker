@@ -1,0 +1,8 @@
+C:\Users\admin\source\repos\HmBitChecker\HmBitChecker\bin\Debug\HmBitChecker.exe.config
+C:\Users\admin\source\repos\HmBitChecker\HmBitChecker\bin\Debug\HmBitChecker.exe
+C:\Users\admin\source\repos\HmBitChecker\HmBitChecker\bin\Debug\HmBitChecker.pdb
+C:\Users\admin\source\repos\HmBitChecker\HmBitChecker\obj\Debug\HmBitChecker.csproj.AssemblyReference.cache
+C:\Users\admin\source\repos\HmBitChecker\HmBitChecker\obj\Debug\HmBitChecker.csproj.SuggestedBindingRedirects.cache
+C:\Users\admin\source\repos\HmBitChecker\HmBitChecker\obj\Debug\HmBitChecker.csproj.CoreCompileInputs.cache
+C:\Users\admin\source\repos\HmBitChecker\HmBitChecker\obj\Debug\HmBitChecker.exe
+C:\Users\admin\source\repos\HmBitChecker\HmBitChecker\obj\Debug\HmBitChecker.pdb

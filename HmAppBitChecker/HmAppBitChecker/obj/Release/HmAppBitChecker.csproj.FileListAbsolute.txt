@@ -1,0 +1,16 @@
+C:\Users\admin\source\repos\HmAppBitChecker\HmAppBitChecker\bin\Release\HmAppBitChecker.exe.config
+C:\Users\admin\source\repos\HmAppBitChecker\HmAppBitChecker\bin\Release\HmAppBitChecker.exe
+C:\Users\admin\source\repos\HmAppBitChecker\HmAppBitChecker\bin\Release\HmAppBitChecker.pdb
+C:\Users\admin\source\repos\HmAppBitChecker\HmAppBitChecker\obj\Release\HmAppBitChecker.csproj.AssemblyReference.cache
+C:\Users\admin\source\repos\HmAppBitChecker\HmAppBitChecker\obj\Release\HmAppBitChecker.csproj.SuggestedBindingRedirects.cache
+C:\Users\admin\source\repos\HmAppBitChecker\HmAppBitChecker\obj\Release\HmAppBitChecker.csproj.CoreCompileInputs.cache
+C:\Users\admin\source\repos\HmAppBitChecker\HmAppBitChecker\obj\Release\HmAppBitChecker.exe
+C:\Users\admin\source\repos\HmAppBitChecker\HmAppBitChecker\obj\Release\HmAppBitChecker.pdb
+G:\repogitory\hm_app_bitchecker\HmAppBitChecker\HmAppBitChecker\bin\Release\HmAppBitChecker.exe.config
+G:\repogitory\hm_app_bitchecker\HmAppBitChecker\HmAppBitChecker\bin\Release\HmAppBitChecker.exe
+G:\repogitory\hm_app_bitchecker\HmAppBitChecker\HmAppBitChecker\bin\Release\HmAppBitChecker.pdb
+G:\repogitory\hm_app_bitchecker\HmAppBitChecker\HmAppBitChecker\obj\Release\HmAppBitChecker.csproj.AssemblyReference.cache
+G:\repogitory\hm_app_bitchecker\HmAppBitChecker\HmAppBitChecker\obj\Release\HmAppBitChecker.csproj.SuggestedBindingRedirects.cache
+G:\repogitory\hm_app_bitchecker\HmAppBitChecker\HmAppBitChecker\obj\Release\HmAppBitChecker.csproj.CoreCompileInputs.cache
+G:\repogitory\hm_app_bitchecker\HmAppBitChecker\HmAppBitChecker\obj\Release\HmAppBitChecker.exe
+G:\repogitory\hm_app_bitchecker\HmAppBitChecker\HmAppBitChecker\obj\Release\HmAppBitChecker.pdb
