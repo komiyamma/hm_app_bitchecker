@@ -4,11 +4,24 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.IO;
+using System.Runtime.InteropServices;
 
 namespace HmAppBitChecker
 {
     internal class Program
     {
+        [DllImport("kernel32.dll")]
+        static extern bool GetBinaryType(string lpApplicationName, out BinaryType lpBinaryType);
+        public enum BinaryType : uint
+        {
+            SCS_32BIT_BINARY = 0, // A 32-bit Windows-based application
+            SCS_64BIT_BINARY = 6, // A 64-bit Windows-based application.
+            SCS_DOS_BINARY = 1, // An MS-DOS – based application
+            SCS_OS216_BINARY = 5, // A 16-bit OS/2-based application
+            SCS_PIF_BINARY = 3, // A PIF file that executes an MS-DOS – based application
+            SCS_POSIX_BINARY = 4, // A POSIX – based application
+            SCS_WOW_BINARY = 2 // A 16-bit Windows-based application
+        }
         static int Main(string[] args)
         {
             if (args.Length > 0)
@@ -17,60 +30,16 @@ namespace HmAppBitChecker
 
                 if (File.Exists(target_path))
                 {
-                    FileStream fs = new FileStream(target_path, FileMode.Open, FileAccess.Read);
+                    BinaryType rettype;
 
-                    const int HEADER_BUF_SIZE = 1024;
-                    byte[] buf = new byte[HEADER_BUF_SIZE]; // データ格納用配列
+                    GetBinaryType(target_path, out rettype);
 
-                    long remain = (long)fs.Length; // 読み込むべき残りのバイト数
-                    int readSize = fs.Read(buf, 0, (int)Math.Min(1024, remain));
-
-                    fs.Dispose();
-
-                    // x86プログラムなら通常先頭1024バイトまでに以下の並びがある
-                    byte[] byteArrX86 = { 0x50, 0x45, 0x00, 0x00, 0x4C, 0x01 };
-
-                    // x64プログラムなら通常先頭1024バイトまでに以下の並びがある
-                    byte[] byteArrX64 = { 0x50, 0x45, 0x00, 0x00, 0x64, 0x86 };
-
-                    int hitCountX86 = 0;
-                    int hitCountX64 = 0;
-                    foreach (byte b in buf)
-                    {
-                        if (b == byteArrX86[hitCountX86])
-                        {
-                            hitCountX86++;
-                        }
-                        else
-                        {
-                            hitCountX86 = 0;
-                        }
-
-                        if (b == byteArrX64[hitCountX64])
-                        {
-                            hitCountX64++;
-                        }
-                        else
-                        {
-                            hitCountX64 = 0;
-                        }
-
-                        if (hitCountX86 == byteArrX86.Length)
-                        {
-                            break;
-                        }
-                        if (hitCountX64 == byteArrX64.Length)
-                        {
-                            break;
-                        }
-                    }
-
-                    if (hitCountX86 == byteArrX86.Length)
+                    if (rettype == BinaryType.SCS_32BIT_BINARY)
                     {
                         Console.WriteLine("x86");
                         return 32;
                     }
-                    if (hitCountX64 == byteArrX64.Length)
+                    if (rettype == BinaryType.SCS_64BIT_BINARY)
                     {
                         Console.WriteLine("x64");
                         return 64;
